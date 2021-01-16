@@ -1,0 +1,455 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="//fonts.googleapis.com/css?family=Raleway:400,700,800&amp;subsetting=all" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700,300" rel="stylesheet" type="text/css">
+<style>
+:root {
+  --color1: #5fbcd3;
+  --color2: #2c89a0;
+  --color3: #164450;
+  --color4: #444444;
+  --color5: #ffffff;
+  --color6: #2b2b2b;
+  --color7: #ADADAD;
+  --serif: 'Hind', serif;
+  --sans-serif: 'Hind', sans-serif;
+  --margin1: 10px;
+  --margin2: 20px;
+  --margin3: 50px;
+  --margin4: 75px;
+  --margin5: 100px;
+}
+body {
+  margin: 0;
+  background-color: var(--color5);
+  color: var(--color4);
+  font-family: var(--sans-serif);
+}
+.text-logo {
+  height: auto;
+  color: var(--color4);
+  font-family: var(--sans-serif);
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-logo img {
+  background-color: var(--color5);
+  border-radius: 50%;
+  border: 5px solid var(--color5);
+  vertical-align: middle;
+  margin: 5px 0px;
+}
+.text-logo:hover {
+  color: var(--color5);
+  text-decoration: none;
+}
+nav {
+  font-family: var(--serif);
+  width: 100%;
+  background-color: var(--color1);
+  background: linear-gradient(to right, var(--color2), var(--color1));
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  z-index: 999;
+}
+nav .container-fluid {
+  position: relative;
+  z-index: 999;
+}
+nav .box-shadow {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  bottom: 1px;
+  z-index: 888;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.nav-item {
+  height: 60px;
+  position: relative;
+}
+.nav-item:hover {
+  background-color: var(--color2);
+}
+.nav-item a {
+  color: var(--color4);
+  text-decoration: none;
+  padding: 5px 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item:hover h5 {
+  color: var(--color5);
+}
+.nav-item > .dropdown-content {
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  padding: 5px 0px;
+  color: var(--color5);
+  background-color: var(--color2);
+  transform: scaleY(0);    
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+.nav-item:hover .dropdown-content {
+  transform: scaleY(1);
+}
+.nav-item .dropdown-content a:hover {
+  color: var(--color5);
+}
+button {
+  width: 100%;
+  font-weight: 700;
+  border: 3px solid var(--color1);
+  background-color: var(--color1);
+  padding: 8px;
+  transition: 0.4s;
+}
+button:hover {
+  border: 3px solid var(--color2);
+  color: var(--color5);
+  background-color: var(--color2);
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.i1 {
+  font-size: 16px;
+}
+.i2 {
+  font-size: 32px;
+}
+.m1 {
+  margin-top: var(--margin1) !important;
+}
+.m2 {
+  margin-top: var(--margin2) !important;
+}
+.m3 {
+  margin-top: var(--margin3) !important;
+}
+.m4 {
+  margin-top: var(--margin4) !important;
+}
+.m5 {
+  margin-top: var(--margin5) !important;
+}
+h1 {
+  color: var(--color1);
+  margin: 0px;
+  font-family: var(--serif);
+}
+h2 {
+  color: var(--color4);
+  margin: 0px;
+  font-family: var(--serif);
+}
+h3 {
+  color: var(--color4);
+  margin: 0px;
+  font-family: var(--serif);
+}
+h4 {
+  color: var(--color4);
+  margin: 0px;
+  font-family: var(--serif);
+}
+h5 {
+  color: var(--color4);
+  margin: 0px;
+  font-family: var(--serif);
+}
+p {
+  margin: 0px;
+}
+main {
+  font-size: 17px;
+  line-height: 27px;
+}
+.footer-top {
+  width: 100%;
+  background-color: #4c4c4c;
+  color: var(--color5);
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer-top .media {
+  color: var(--color5);
+  font-size: 35px;
+}
+.footer-top .media:hover {
+  color: var(--color1);
+}
+.footer-top h2 {
+  font-family: var(--sans-serif);
+  color: var(--color5);
+}
+.footer-top p {
+  color: var(--color5);
+}
+.footer-top a {
+  color: var(--color5);
+  text-decoration: none;
+}
+.footer-top a:hover {
+  text-decoration: underline solid;
+}
+.footer-top .subscribe {
+  text-decoration: underline dotted;
+}
+.footer-sub {
+  width: 100%;
+  background-color: #3b3b3b;
+  color: #adadad;
+  font-size: 14px;
+}
+a.tt {
+  position: relative;
+}
+.tt:hover:after {
+  background: #333;
+  border-radius: 5px;
+  bottom: 44px;
+  color: #fff;
+  content: attr(data-tt);
+  padding: 5px 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+}
+.tt:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 6px 6px 0 6px;
+  bottom: 38px;
+  content:"";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+}
+</style>
+</head>
+<body>
+
+<!--
+<header>
+  <div class="container d-none d-md-block">
+    <div class="row justify-content-end">
+      <div class="col-md-3 col-xl-2 text-center">
+        <a href="#"><small>Community Crowdfunding</small></a>
+      </div>
+      <div class="col-md-3 col-xl-2 text-center">
+        <a href="#"><small>English <i class="fas fa-caret-down"></i></small></a>
+      </div>
+    </div>
+  </div>
+</header>
+-->
+
+<nav>
+  <!-- Mobile Nav -->
+  <div class="container-fluid d-md-none">
+    <div class="row middle-xs">
+      <div class="col-2 text-left">
+        <i class="fas fa-bars i2"></i>
+      </div>
+      <div class="col-8 text-center">
+        <a href="https://www.aeon.cash" class="text-logo" title="aeon.cash - A lightweight digital currency">
+          <img src="http://www.aeon.cash/branding/aeon_logo_32x32.png" alt="Aeon Logo">
+          AEON
+        </a>
+      </div>
+      <div class="col-2 text-right">
+        <i class="fas fa-globe-americas i2"></i>
+      </div>
+    </div>
+  </div>
+  <!-- END Mobile Nav -->
+    
+  <!-- Desktop Nav -->
+  <div class="container d-none d-md-block">
+    <div class="row">
+      <div class="col-md-3 col-lg-4 col-xl-5">
+        <div class="row h-100">
+          <a href="https://www.aeon.cash" class="text-logo" title="aeon.cash - A lightweight digital currency">
+            <img src="http://www.aeon.cash/branding/aeon_logo_32x32.png" alt="Aeon Logo">
+            &nbsp;AEON
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9 col-lg-8 col-xl-7">
+        <div class="row h-100">
+          <div class="col nav-item dropdown text-center">
+            <a href=""><h5>Get started <i class="fas fa-caret-down"></i></h5></a>
+            <div class="dropdown-content">
+              <a href="#">What is Aeon?</a>
+              <a href="#">Guides</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+          <div class="col nav-item text-center">
+            <a href=""><h5>Downloads</h5></a>
+          </div>
+          <div class="col nav-item dropdown text-center">
+            <a href=""><h5>Resources <i class="fas fa-caret-down"></i></h5></a>
+            <div class="dropdown-content">
+              <a href="#">History</a>
+              <a href="#">Glossary</a>
+              <a href="#">Merchants</a>
+              <a href="#">Technical specs</a>
+            </div>
+          </div>
+          <div class="col nav-item dropdown text-center">
+            <a href=""><h5>Language <i class="fas fa-caret-down"></i></h5></a>
+            <div class="dropdown-content">
+              <a href="#">English</a>
+              <a href="#">Espanol</a>
+              <a href="#">Deutsch</a>
+              <a href="#">Polski</a>
+              <a href="#">Esperanto</a>
+              <a href="#">Française</a>
+              <a href="#">русский</a>
+              <a href="#">中文</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Desktop Nav -->
+  
+  <div class="box-shadow">
+  </div>
+</nav>
+
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 hidden-xs hidden-sm hidden-lg hidden-xl m3">
+      </div>
+      <div class="col-12 text-center ">
+        <h1>A lightweight digital currency</h1>
+      </div>
+      <div class="col-12 m4">
+      </div>
+    </div>
+
+    <div class="row middle-xs">
+      <div class="col-lg-1 col-xl-1">
+      </div>
+
+      <div class="col-12 col-md-5">
+        <p class="text-center">
+          Decentralized digital currency is slowly becoming a normal part of everyday life. Yet everybody's main internet device continues to be their cellphone, a device with a low-powered CPU and limited available storage.
+        <br><br>
+          AEON is about enabling this era, enabling an age where all people everywhere have the freedom to privately send and receive money with whatever gadget they already own.
+        </p>
+        <button class="m1">
+          Learn More
+        </button>
+      </div>
+
+      <div class="col-12 col-md-7 col-lg-5 col-xl-5 first-md text-center">
+        <video style="display:block;" width="100%" height="100%" controls="" poster="https://www.getmonero.org/img/monero-community.png" onclick="this.paused ? this.play() : this.pause();" preload="none">
+          <source src="https://www.getmonero.org/media/Monero_Promo.m4v">
+        </video>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 m3">
+      </div>
+      <div class="col-12 col-md-4 text-center m3">
+        <img src="http://www.aeon.cash/img/icon_secure.png" height="65">
+        <h2>Secure</h2>
+        <p class="m2">Each transaction is secured with robust cryptography and distributed through a global peer-to-peer consensus network.</p>
+      </div>
+      <div class="col-12 col-md-4 text-center m3">
+        <img src="http://www.aeon.cash/img/icon_private.png" height="65">
+        <h2>Private</h2>
+        <p class="m2">By default, Aeon utilizes a cryptographic system to transfer funds without the identifying information of each user becoming visible on the blockchain.</p>
+      </div>
+      <div class="col-12 col-md-4 text-center m3">
+        <img src="http://www.aeon.cash/img/icon_untraceable.png" height="65">
+        <h2>Untraceable</h2>
+        <p class="m2">Aeon uses ring signatures to make transactions untraceable, meaning it is very difficult for blockchain analysis to determine if funds have been spent.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="m5">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center m3">
+          <a href="https://bitcointalk.org/index.php?topic=641696.0" class="tt" data-tt="BitcoinTalk"><i class="fab fa-bitcoin media"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://www.reddit.com/r/Aeon" class="tt" data-tt="Reddit"><i class="fab fa-reddit media"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://github.com/aeonix" class="tt" data-tt="Github"><i class="fab fa-github media"></i></a>
+        </div>
+        <div class="col-12 m2">
+        </div>
+        <div class="col-md-6 m2">
+          <h2>About this project</h2>
+          <p class="m1">AEON is open source and completely free to use without restriction.</p>
+          <p class="m1">Likewise, everybody is welcome to contribute.</p>
+        </div>
+        <div class="col-md-6 m2">
+          <h2>Subscribe to announcements</h2>
+          <p class="m1">We will send you notifications about new Aeon releases and other important announcements like security patches.</p>
+          <p class="m1">Click <a href="https://docs.google.com/forms/d/e/1FAIpQLSci2UitA67N0W_xgSPLlGj6acGnTOtTdDR_ODZwXTHXZsWnCQ/viewform" class="subscribe" rel="nofollow">here</a> to go to our email subscription page.</p>
+        </div>
+        <div class="col-12 text-center m3">
+          <a href="#"><b>Legal</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#"><b>Press Kit</b></a>
+        </div>
+        <div class="col-12 m3">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-sub">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center m2">
+          Copyright © 2017-2021, AEON, The Monero Project.
+        </div>
+        <div class="col-12 m2">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html> 
